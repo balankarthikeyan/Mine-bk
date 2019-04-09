@@ -1,25 +1,14 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import { ButtonIcon, mycomponent, styled } from "bk-my-material";
+const HeartinIcon = styled(ButtonIcon)`background: black;`;
 class App extends Component {
   render() {
+    const text = "My " + mycomponent.name;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>UI Customization</h1>
+        <ButtonIcon icon="settings" align="right" text={"IRONMAN"} />
+        <HeartinIcon align="right" text={text} />
       </div>
     );
   }
